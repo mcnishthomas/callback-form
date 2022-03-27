@@ -6,5 +6,5 @@ nameInput.addEventListener('focus', event => {
 });
 
 nameInput.addEventListener('blur', event => {
-  event.target.className = '';
+  event.target.classList.remove = 'highlight';
 });
