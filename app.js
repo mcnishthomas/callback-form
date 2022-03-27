@@ -1,10 +1,15 @@
 const nameInput = document.getElementById('name');
 const messageTextArea = document.getElementById('message');
 
-nameInput.addEventListener('focus', event => {
+const focusHandler = event => {
   event.target.className = 'highlight';
-});
+};
+const blurHandler = event => {
+  event.target.className = '';
+};
 
-nameInput.addEventListener('blur', event => {
-  event.target.classList.remove = 'highlight';
-});
+nameInput.addEventListener('focus', focusHandler);
+nameInput.addEventListener('blur', blurHandler);
+
+messageTextArea.addEventListener('focus', focusHandler);
+messageTextArea.addEventListener('blur', blurHandler);
